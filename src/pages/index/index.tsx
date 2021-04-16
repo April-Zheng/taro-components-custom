@@ -9,6 +9,10 @@ export default function Home() {
       name: "图片预览",
       path: "/pages/preview/index",
     },
+    {
+      name: "InputNumber",
+      path: "/pages/inputNumber/index",
+    },
   ];
   const onNavigateTo = (item) => {
     Taro.navigateTo({ url: item.path });

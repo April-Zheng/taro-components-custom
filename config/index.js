@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import path, { resolve } from "path";
 
 const config = {
   projectName: "taro-components-custom",

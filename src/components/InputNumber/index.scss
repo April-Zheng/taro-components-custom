@@ -1,0 +1,23 @@
+.input-number-com {
+  display: flex;
+  align-items: center;
+  &__minute,
+  &__plus {
+    font-size: 24px;
+    padding: 16px;
+  }
+
+  .disabled {
+    opacity: 0.3;
+  }
+  &__input {
+    background: #f2f2f2;
+    border-radius: 2px;
+    height: 36px;
+    width: 64px;
+    border-left: none;
+    border-right: none;
+    font-size: 24px;
+    text-align: center;
+  }
+}
