@@ -1,0 +1,13 @@
+.preview-image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 48px 24px;
+  .preview-image-item {
+    width: 350px;
+    height: 200px;
+    padding: 0 18px 0 18px;
+    box-sizing: border-box;
+    object-fit: contain;
+  }
+}

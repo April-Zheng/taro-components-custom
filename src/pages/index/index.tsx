@@ -1,32 +1,31 @@
-import React, { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import { View } from "@tarojs/components";
+import Taro from "@tarojs/taro";
+import React from "react";
+import "./index.scss";
 
-import "taro-ui/dist/style/components/button.scss" // 按需引入
-import './index.scss'
-
-export default class Index extends Component {
-
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  render () {
-    return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-        <AtButton type='primary'>I need Taro UI</AtButton>
-        <Text>Taro UI 支持 Vue 了吗？</Text>
-        <AtButton type='primary' circle={true}>支持</AtButton>
-        <Text>共建？</Text>
-        <AtButton type='secondary' circle={true}>来</AtButton>
-      </View>
-    )
-  }
+export default function Home() {
+  const pages = [
+    {
+      name: "图片预览",
+      path: "/pages/preview/index",
+    },
+  ];
+  const onNavigateTo = (item) => {
+    Taro.navigateTo({ url: item.path });
+  };
+  return (
+    <View className="home-container">
+      {pages.map((item) => {
+        return (
+          <View
+            className="routes-item"
+            key={item.path}
+            onClick={() => onNavigateTo(item)}
+          >
+            {item.name}
+          </View>
+        );
+      })}
+    </View>
+  );
 }
